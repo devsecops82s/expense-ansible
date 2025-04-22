@@ -20,7 +20,7 @@
 
   - name: create html directory
     ansible.builtin.file:
-      path: /usr/share/nginx/html/
+      path: /usr/share/nginx/html
       state: directory
 
   - name: Download frontend code
@@ -30,8 +30,8 @@
 
   - name: unzip frontend code
     ansible.builtin.unarchive:
-      src: /usr/share/nginx/html/
-      dest: /tmp/frontend.zip
+      src: /tmp/frontend.zip
+      dest: /usr/share/nginx/html
       remote_src: yes
 
   - name: Copy frontend service
