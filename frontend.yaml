@@ -3,8 +3,8 @@
   become: yes
   tasks:
   - name: Install Nginx
-    ansible.builtin.package:
-      name: ngnix
+    ansible.builtin.dnf:
+      name: nginx
       state: installed
 
   - name: start and enable nginx server
