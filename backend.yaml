@@ -46,6 +46,16 @@
       src: backend.service
       dest: /etc/systemd/system/backend.service
 
+  - name: import mysql data
+    community.mysql.mysql_db:
+      satae: import
+      name: all
+      login_user: root
+      login_password: ExpenseApp@1
+      login_host: mysql.bsdaws82s.site 
+      target: /app/schema/backend.sql
+
+ 
 
 
 
